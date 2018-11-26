@@ -10,8 +10,52 @@
 // on the tree class.  Each method should accept a
 // function that gets called with each element in the tree
 
-class Node {}
+class Node {
+    constructor(data, children = []){
+        this.data = data;
+        this.children = children;
+    }
 
-class Tree {}
+    add(data) {
+        return this.children.push(new Node(data));
+    }
+
+    remove(data) {
+        return this.children = this.children.filter(child => child.data !== data);
+    }
+}
+
+class Tree {
+    constructor(){
+        this.root = null;
+    }
+
+    traverseBF(fn) {
+        // this.root.children();
+        let queue = [this.root];
+        while(queue.length){
+            let current = queue.shift();
+            if(current.children && current.children.length > 0){
+                // current.children.forEach(child => queue.push(child));
+                // or you could do
+                queue.push(...current.children);
+            }
+            fn(current);
+        }
+    }
+
+    traverseDF(fn) {
+        let queue = [this.root]; //form queue
+        while(queue.length){
+            let current = queue.shift(); //take first item off queue
+            if(current.children && current.children.length > 0){
+                //if current item has children
+                queue.unshift(...current.children);
+                //process
+            }
+            fn(current);
+        }
+    }
+}
 
 module.exports = { Tree, Node };

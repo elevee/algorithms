@@ -8,6 +8,17 @@
 //     q.add(1);
 //     q.remove(); // returns 1;
 
-class Queue {}
+class Queue {
+    constructor(){
+      this.list = [];
+    }
+
+    add(num){
+      this.list.unshift(num); //comes in the front
+    }
+    remove(){
+        return this.list.pop(); //FIFO flow, first in first out
+    }
+}
 
 module.exports = Queue;
