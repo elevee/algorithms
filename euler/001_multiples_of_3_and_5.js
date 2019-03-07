@@ -9,7 +9,7 @@ function sumNatural(upperLimit){
     nums = Array.from(Array(upperLimit).keys());
     nums.shift(); //get rid of 0
 
-    console.log(nums.reduce(function(acc, cur){
+    return nums.reduce(function(acc, cur){
         // if (cur % 3 === 0) {
         //     console.log(`${cur} is a multiple of 3`)
         // }
@@ -17,10 +17,12 @@ function sumNatural(upperLimit){
         //     console.log(`${cur} is a multiple of 5`)
         // }
         return cur % 3 === 0 || cur % 5 === 0 ? acc+=cur : acc;
-    }, 0))
+    }, 0)
 }
 
+module.exports = sumNatural
+
 // sumNatural(10)
-sumNatural(1000)
+// sumNatural(1000)
 
 

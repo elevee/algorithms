@@ -49,4 +49,4 @@ function findSumOfEvenFibs(){
     return sum;
 }
 
-console.log(findSumOfEvenFibs()); //4613732
+module.exports = findSumOfEvenFibs

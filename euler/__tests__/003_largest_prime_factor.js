@@ -1,5 +1,4 @@
-var path = require('path');
-
+const path = require('path');
 const func = require('../'+path.basename(__filename));
 
 // describe('hello', () => {
