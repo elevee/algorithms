@@ -11,11 +11,11 @@ function chessBoardCellColor(cell1: string, cell2: string): boolean {
     }
     const c1 = cell1.split('');
     let cell1x = board[c1[0]];
-    let cell1y = c1[1];
+    let cell1y = parseInt(c1[1]);
 
     const c2 = cell2.split('');
     let cell2x = board[c2[0]];
-    let cell2y = c2[1];
+    let cell2y = parseInt(c2[1]);
     // console.log(`${cell1x}, ${cell1y} and ${cell2x}, ${cell2y}`)
     // slope is (y2-y1)/(x2-x1)
     let slope = (cell2y - cell1y) / (cell2x - cell1x)
