@@ -1,0 +1,6 @@
+/*
+    DEALING WITH COLLISIONS
+        Separate Chaining
+        Linear Probing
+
+*/
