@@ -23,6 +23,7 @@ function arrayChange(inputArray: number[]): number {
   return moveCount;
 }
 
+console.log(arrayChange([1]));
 console.log(arrayChange([1, 1, 1]));
 console.log(arrayChange([4, 1, 9, 44, 55]));
 console.log(arrayChange([4, 1, 9, 44, 55, 38, 2]));
